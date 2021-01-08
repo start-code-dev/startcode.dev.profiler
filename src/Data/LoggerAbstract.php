@@ -15,14 +15,27 @@ abstract class LoggerAbstract
      */
     private $startTime;
 
+    private ?string $id = null;
+
     public function getElapsedTime() : float
     {
         return microtime(true) - $this->startTime;
     }
 
+    public function getId() : ?string
+    {
+        return $this->id;
+    }
+
     public function setStartTime(float $startTime) : self
     {
         $this->startTime = $startTime;
+        return $this;
+    }
+
+    public function setId(string $id) : self
+    {
+        $this->id = $id;
         return $this;
     }
 

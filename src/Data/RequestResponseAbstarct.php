@@ -1,16 +1,15 @@
 <?php
 
 namespace Startcode\Profiler\Data;
+
 use Startcode\CleanCore\Application;
 
 abstract class RequestResponseAbstarct extends LoggerAbstract
 {
-    /**
-     * @var Application
-     */
-    private $application;
 
-    public function getApplication() : Application
+    private ?Application $application = null;
+
+    public function getApplication() : ?Application
     {
         return $this->application;
     }

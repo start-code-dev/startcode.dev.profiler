@@ -1,7 +1,8 @@
 <?php
 
 namespace Startcode\Profiler;
-use Startcode\Profiler\Data\Error;
+
+use Startcode\Logger\Logger;
 
 abstract class ErrorAbstract
 {
@@ -17,7 +18,7 @@ abstract class ErrorAbstract
     private $debug;
 
     /**
-     * @var ***Logger
+     * @var Logger
      */
     private $logger;
 
@@ -50,7 +51,7 @@ abstract class ErrorAbstract
         return $this;
     }
 
-    public function setLogger(***Logger $logger) : self
+    public function setLogger(Logger $logger) : self
     {
         $this->logger = $logger;
         return $this;
@@ -82,11 +83,11 @@ abstract class ErrorAbstract
 
     public function log() : self
     {
-        if ($this->logger instanceof ***Logger) {
-            $loggerData = new Error();
+        if ($this->logger instanceof Logger) {
+            $loggerData = new \Startcode\Profiler\Data\Error();
             $loggerData
                 ->setErrorData($this->errorData);
-            $this->logger->log($loggerData);
+//            $this->logger->log($loggerData); //TODO extend logger
         }
         return $this;
     }

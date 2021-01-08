@@ -42,12 +42,7 @@ class Request extends RequestResponseAbstarct
         ];
     }
 
-    /**
-     *
-     * @param array $params
-     * @return array
-     */
-    private function obfuscateParams(array $params)
+    private function obfuscateParams(array $params) : array
     {
         parse_str(trim(file_get_contents('php://input')), $rawBodyParams);
 

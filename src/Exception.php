@@ -5,7 +5,6 @@ namespace Startcode\Profiler;
 class Exception extends ErrorAbstract
 {
 
-
     public function handle(\Exception $exception) : void
     {
         $this->getErrorData()

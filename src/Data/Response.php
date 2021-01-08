@@ -2,13 +2,12 @@
 
 namespace Startcode\Profiler\Data;
 
+use Startcode\Runner\Profiler;
+
 class Response extends RequestResponseAbstarct
 {
 
-    /**
-     * @var ***Profiler
-     */
-    private $profiler;
+    private ?Profiler $profiler = null;
 
     public function getRawData() : array
     {
@@ -27,7 +26,7 @@ class Response extends RequestResponseAbstarct
         ];
     }
 
-    public function setProfiler(***Profiler $profiler)
+    public function setProfiler(Profiler $profiler)
     {
         $this->profiler = $profiler;
         return $this;

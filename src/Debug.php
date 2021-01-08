@@ -2,6 +2,8 @@
 
 namespace Startcode\Profiler;
 
+use Startcode\Logger\Writer;
+
 class Debug
 {
 
