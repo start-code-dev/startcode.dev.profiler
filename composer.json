@@ -38,11 +38,11 @@
     "require": {
         "php"                   : ">=7.4",
         "startcode/clean-core"  : "1.*",
-        "startcode/http"        : "dev-main",
+        "startcode/http"        : "1.*",
         "startcode/commando"    : "1.*",
-        "startcode/value-object": "dev-main",
-        "startcode/runner"      : "dev-main",
-        "startcode/logger"      : "dev-main"
+        "startcode/value-object": "1.*",
+        "startcode/runner"      : "1.*",
+        "startcode/logger"      : "1.*"
     },
     "repositories": [
         {"type": "git", "url": "https://github.com/start-code-dev/startcode.dev.clean-core.git"},
