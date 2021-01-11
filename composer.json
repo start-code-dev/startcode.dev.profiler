@@ -38,9 +38,6 @@
     "require": {
         "php"                   : ">=7.4",
         "startcode/clean-core"  : "1.*",
-        "startcode/http"        : "1.*",
-        "startcode/commando"    : "1.*",
-        "startcode/value-object": "1.*",
         "startcode/runner"      : "1.*",
         "startcode/logger"      : "1.*"
     },
